@@ -1,0 +1,36 @@
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("chirp-regular.woff2") format('woff2');
+    font-weight: 400 ;
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("Chirp-Medium.woff2") format('woff2');
+    font-weight: 500 ;
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("chirp-bold.woff2") format('woff2');
+    font-weight: 700 ;
+
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("chirp-extended-heavy-web.woff2") format('woff2');
+    font-weight: 900 ;
+}
+
+body{
+
+    margin: 0 ;
+    font-family: chirp;
+    font-weight: 400 ;
+    height: 2000px;
+}

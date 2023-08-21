@@ -1,0 +1,218 @@
+.tweets {
+
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    
+}
+
+.tweet-post {
+
+    display: flex;
+    flex-direction: row ;
+    width: 580px ;
+    padding: 12px 18px 14px 18px ;
+    border: 1px rgb(240, 240, 240) solid;
+    
+}
+
+.profile-pic-div {
+
+    margin-right: 13px ;
+    width: 50px ;
+}
+
+.profile-pic {
+
+    height: 40px ;
+    border-radius: 20px ;
+    
+}
+
+.tweet-content {
+
+    display: flex ;
+    justify-content: space-between;
+
+}
+
+.profile-name {
+
+    font-weight: 700 ;
+    font-size: 15px ;
+    display: flex;
+    align-items: top;
+    
+}
+
+.messi-ten-img {
+
+    height: 17px ;
+    top: 3px ;
+}
+
+.verified {
+
+    height: 19px ;
+
+}
+
+.user-id {
+
+    font-weight: 400 ;
+    color: rgb(80, 80, 80) ;
+}
+
+.horizontal-option {
+
+    height: 20px ;
+}
+
+.tweet-text {
+
+    font-size: 15px ;
+    line-height: 21px;
+    margin-bottom: 13px;
+}
+
+.tags {
+
+    color: rgb(29, 155, 240);
+}
+
+.heart-emoji {
+
+    font-family: Segoe UI Emoji ;
+}
+
+.crying-emoji {
+
+    padding-top: 3px;
+    height: 15px ;
+}
+
+.tweet-img {
+
+    width: 530px;
+    border-radius: 15px ;
+    
+}
+
+.tweet-img-bcci-div {
+    
+    display: flex;
+    overflow: hidden;
+    height: 285px;
+    width: 530px;
+    border: 1px solid rgb(240, 240, 240);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}
+
+.tweet-img-bcci-1-div {
+
+    flex: 1 ;
+    overflow: hidden;
+    margin-right: 2px ;
+    
+}
+
+.tweet-img-bcci-2-3-div {
+
+    flex: 1 ;
+    overflow: hidden;
+
+}
+
+.tweet-img-bcci-2-div {
+
+    height: 50%;
+    overflow: hidden;
+}
+
+.tweet-img-bcci-3-div {
+
+    height: 50%;
+    overflow: hidden;
+}
+
+.tweet-img-bcci-1 {
+
+    height: 100%;
+}
+
+.tweet-img-bcci-2 {
+
+    width: 100%;
+    margin-bottom: 2px ;
+}
+
+.tweet-img-bcci-3 {
+
+    width:100% ;
+    margin-top: 2px;
+}
+
+.photo-cred {
+
+    color: rgb(83, 100, 113);
+    font-size: 14px ;
+}
+
+.bottom-icon-div-main {
+
+    font-size: 14px;
+    color: rgb(83, 100, 113);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.bottom-icon-div {
+
+    display: flex;
+    
+}
+
+.bottom-icon {
+
+    height: 18px;
+    color: black;
+    
+}
+
+.bottom-div-counter  {
+
+    margin-left: 13px ;
+}
+
+.bottom-icon-retweet {
+
+    height: 15px;
+    margin-top: 1px;
+}
+
+.bottom-icon-heart {
+
+    height: 19px;
+}
+
+.bottom-icon-views {
+
+    height: 16px ;
+    margin-top: 1px ;
+}
+
+.bottom-icon-share {
+
+    height: 16px ;
+    margin-right: 2px ;
+}
+
+.flag-div img {
+
+    height: 16px ;
+    margin-bottom: -2px;
+}

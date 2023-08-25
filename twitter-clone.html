@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Twitter Clone
+        </title>
+
+        <meta charsset="UTF-8">
+        <meta charset="ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+
+        <link href="fonts\chirp-regular.woff2">
+        <link href="fonts\chirp-extended-heavy-web.woff2">
+        <link href="fonts\chirp-bold.woff2">
+
+        <link rel="stylesheet" href="style-sheet/main.css">
+        <link rel="stylesheet" href="style-sheet/header.css">
+        <link rel="stylesheet" href="style-sheet/general.css">
+        <link rel="stylesheet" href="style-sheet/sidebar.css">
+        <link rel="stylesheet" href="style-sheet/right-sidebar.css">
+
+    </head>
+    <body>
+
+        <nav class="sidebar">
+
+            <div class="sidebar-main-div">
+
+                <div class="x-icon-div">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" 
+                    class="x-icon">
+                    <g>
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">                    
+                    </path>
+                    </g>
+                    </svg>
+                </div>
+    
+                <div class="sidebar-div">
+                    
+                    <div class="blue-dot-home">
+                    </div>
+
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M12 1.696L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM12 16.5c-1.933 0-3.5-1.567-3.5-3.5s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M3 4.5C3 3.12 4.12 2 5.5 2h13C19.88 2 21 3.12 21 4.5v15c0 1.38-1.12 2.5-2.5 2.5h-13C4.12 22 3 20.88 3 19.5v-15zM5.5 4c-.28 0-.5.22-.5.5v15c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-15c0-.28-.22-.5-.5-.5h-13zM16 10H8V8h8v2zm-8 2h8v2H8v-2z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M7.501 19.917L7.471 21H.472l.029-1.027c.184-6.618 3.736-8.977 7-8.977.963 0 1.95.212 2.87.672-.444.478-.851 1.03-1.212 1.656-.507-.204-1.054-.329-1.658-.329-2.767 0-4.57 2.223-4.938 6.004H7.56c-.023.302-.05.599-.059.917zm15.998.056L23.528 21H9.472l.029-1.027c.184-6.618 3.736-8.977 7-8.977s6.816 2.358 7 8.977zM21.437 19c-.367-3.781-2.17-6.004-4.938-6.004s-4.57 2.223-4.938 6.004h9.875zm-4.938-9c-.799 0-1.527-.279-2.116-.73-.836-.64-1.384-1.638-1.384-2.77 0-1.93 1.567-3.5 3.5-3.5s3.5 1.57 3.5 3.5c0 1.132-.548 2.13-1.384 2.77-.589.451-1.317.73-2.116.73zm-1.5-3.5c0 .827.673 1.5 1.5 1.5s1.5-.673 1.5-1.5-.673-1.5-1.5-1.5-1.5.673-1.5 1.5zM7.5 3C9.433 3 11 4.57 11 6.5S9.433 10 7.5 10 4 8.43 4 6.5 5.567 3 7.5 3zm0 2C6.673 5 6 5.673 6 6.5S6.673 8 7.5 8 9 7.327 9 6.5 8.327 5 7.5 5z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path></g></svg>
+                    </div>
+                    <div class="sidebar-icon-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="sidebar-icon"><g><path d="M3.75 12c0-4.56 3.69-8.25 8.25-8.25s8.25 3.69 8.25 8.25-3.69 8.25-8.25 8.25S3.75 16.56 3.75 12zM12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-4.75 11.5c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25S6 11.31 6 12s.56 1.25 1.25 1.25zm9.5 0c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25zM13.25 12c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z"></path></g></svg>
+                    </div>
+                
+    
+                </div>
+
+                
+
+                <div class="sidebar-post-div">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" 
+                    class="sidebar-post-button">
+                    <g>
+                    <path d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z">
+                    </path>
+                    </g>
+                    </svg>
+                </div>
+
+            </div >
+                
+            <div class="my-profile-photo-main-div">
+                <div class="my-profile-photo-div">
+
+                <div class="my-profile-photo-border">
+                    <img class="my-profile-photo" src="profile-pics\my-profile-pic.png">
+                    
+                </div>
+                <div class="blue-dot">
+                </div>
+                
+                </div>
+            </div>
+            
+        </nav>
+
+        <main class="main">
+
+            <div class="main-sub-div">
+                <div class="header">
+                    <div class="header-sub-div">
+                        <div class="home">Home</div>
+                        <div class="fy-and-following-div">
+                            <div class="for-you-button">For you</div>
+                                <div class="blue-bar-under"></div>
+                            <div class="following-button">Following</div>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="post-div">
+                        <div class="post-sub-div">
+                            <div class="my-profile-pic-div">
+                                <img class="my-profile-pic" src="profile-pics\my-profile-pic.png">
+                            </div>
+                            <div class="text-box-div">
+                                <div class="privacy-div">
+                                    <div class="privacy">
+                                        Everyone <svg viewBox="0 0 24 24" aria-hidden="true" 
+                                        class="down-arrow"><path 
+                                        d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z">
+                                        </path>
+                                        </svg>
+                                        
+                                    </div>
+                                </div>
+                                <div class="text-box">
+                                    <input type="text" class="input" placeholder="What is happening?!">
+
+                                </div>
+                                <div class="reply-privacy-div">
+                                    <div class="reply-privacy">
+                                        <img class="globe-icon" src="twitter-icon\globe-icon.png">
+                                            Everyone can reply
+                                    </div>
+                                    
+                                </div>
+                                <div class="post-button-div">
+                                    <div class="post-attachments">
+                                        <div class="photo-icon-div">
+                                            <img class="photo-icon" src="twitter-icon/photo.png">
+
+                                        </div>
+                                        <div class="gif-icon-div">
+                                            <img class="gif-icon" src="twitter-icon/gif.png">
+
+                                        </div>
+                                        <div class="poll-icon-div">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="poll-icon">
+                                                <g>
+                                                <path d="M6 5c-1.1 0-2 .895-2 2s.9 2 2 2 2-.895 2-2-.9-2-2-2zM2 7c0-2.209 1.79-4 4-4s4 1.791 4 4-1.79 4-4 4-4-1.791-4-4zm20 1H12V6h10v2zM6 15c-1.1 0-2 .895-2 2s.9 2 2 2 2-.895 2-2-.9-2-2-2zm-4 2c0-2.209 1.79-4 4-4s4 1.791 4 4-1.79 4-4 4-4-1.791-4-4zm20 1H12v-2h10v2zM7 7c0 .552-.45 1-1 1s-1-.448-1-1 .45-1 1-1 1 .448 1 1z">
+
+                                                </path>
+                                            </g>
+                                            </svg>
+
+                                        </div>
+                                        <div class="emoji-icon-div">
+                                            <img class="emoji-icon" src="twitter-icon/emoji.png" alt="">
+
+                                        </div>
+                                        <div class="schedule-icon-div">
+                                            <img class="schedule-icon" src="twitter-icon/schedule.png">
+                                        </div>
+                                        <div class="location-icon-div">
+                                            <img class="location-icon" src="twitter-icon/location.png" alt="">
+
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="post-button">Post</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="new-tweets">Show 25 Tweets</div>
+                
+                <div class="tweets">
+
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-2.jpg">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            Leo Messi&nbsp;
+                                            <img class="messi-ten-img" src="twitter-icon\messi-10.svg">
+                                            &nbsp;Fan Club&nbsp;
+                                        </span>    
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+
+                                        <span class="user-id">&nbsp;@WeAreMessi&nbsp;&#183;&nbsp;6h</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    <div class="tweet-text-messi">
+                                        Get someone who looks at you Antonela looks at Leo Messi <span class="heart-emoji">&#x2764;</span> 
+                                    <img class="crying-emoji" src="twitter-icon\crying-emoji.svg">
+                                    </div>
+                                    
+                                </div>
+                                <div class="tweet-img-div">
+                                    <img class="tweet-img" src="tweet-img\tweet-img-1.jfif">
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter">
+                                            146
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            2,549
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            31.2K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-views">
+                                            342.4K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-3.jpg">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            Yogi Adityanath&nbsp;
+                                        </span>
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+
+                                        <span class="user-id">&nbsp;@myogiadityanath&nbsp;&#183;&nbsp;Aug 19</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    प्रख्यात फिल्म अभिनेता श्री रजनीकांत जी से आज लखनऊ स्थित सरकारी आवास पर शिष्टाचार भेंट हुई।
+                                    <br><br>
+                                    <span class="tags">&#64;rajinikanth</span>
+                                </div>
+                                <div class="tweet-img-div">
+                                    <img class="tweet-img" src="tweet-img\tweet-img-2.jfif">
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                            
+                                    </div>
+                                        
+                                        <span class="bottom-div-counter">
+                                            676
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            5,892
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            52.8K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-views">
+                                            779.2K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-4.png">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            PMO India&nbsp;
+                                            
+                                        </span>
+                                        <img class="verified-grey" src="twitter-icon\twitter-verified.svg">
+                                        <span class="user-id">&nbsp;PMOIndia&nbsp;&#183;&nbsp;Aug 19</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    Pained by the mishap near Leh in which we have lost personnel of the Indian Army. Their rich service to the nation will always be remembered. Condolences to the bereaved families. May those who are injured recover at the earliest: PM 
+                                    <span class="tags">@narendramodi</span>
+                                </div>
+                                <div class="tweet-img-div">
+
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                                
+                                        </div>
+                                        
+                                        <span class="bottom-div-counter">
+                                            404
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            825
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            3,124
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-views">
+                                            312.2K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-5.jpg">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            CricTracker&nbsp;
+                                            
+                                        </span>
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+                                        <span class="user-id">&nbsp;@Cricketracker&nbsp;&#183;&nbsp;Aug 19</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    Who is Neymar Jr. equivalent in cricket?
+                                    <br><br>
+                                    <span class="tags">#CricTracker</span> <span class="tags">#Neymar</span>
+                                </div>
+                                <div class="tweet-img-div">
+                                    <img class="tweet-img" src="tweet-img\tweet-img-3.jfif">
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                            
+                                        </div>                            
+                                        <span class="bottom-div-counter">
+                                            553
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            178
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            6,086
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-views">
+                                            357.3K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-6.jpg">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            BCCI&nbsp;
+                                        </span>
+                                        
+                                        <span class="user-id">&nbsp;@BCCI&nbsp;&#183;&nbsp;Aug 19</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    &#128247;&#128247; Mr. VVS Laxman, Head Cricket, NCA welcomed and 
+                                    addressed the participants of the High Performance Camp 
+                                    for Emerging Players.
+                                    <br><br>
+                                    This exciting and hungry bunch is all set to hone their 
+                                    skills and develop new dimensions to their game during 
+                                    the course of the next 20 days.
+                                </div>
+                                <div class="tweet-img-bcci-div">
+                                    <div class="tweet-img-bcci-1-div">
+                                        <img class="tweet-img-bcci-1" src="tweet-img\tweet-img-4a.jfif">
+                                    </div>
+                                    <div class="tweet-img-bcci-2-3-div">
+                                        <div class="tweet-img-bcci-2-div">
+                                            <img class="tweet-img-bcci-2" src="tweet-img\tweet-img-4b.jfif">
+                                        </div>
+                                        <div class="tweet-img-bcci-3-div">
+                                            <img class="tweet-img-bcci-3" src="tweet-img\tweet-img-4c.jfif">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="photo-cred">
+                                    <a class="vvs-laxman" href="x.com/vvs-laxman">VVS Laxman</a>
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                            
+                                        </div>                            
+                                        <span class="bottom-div-counter">
+                                            48
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            187
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            5,499
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        </div>
+                                        
+                                        <span class="bottom-div-counter-views">
+                                            254.1K
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                    <div class="tweet-post">
+                            <div class="profile-pic-div">
+                                <img class="profile-pic" src="profile-pics\profile-pic-7.jpg">
+                            </div>
+                            <div class="tweet-content-box">
+                                <div class="tweet-content">
+                                    <div class="profile-name">
+                                        <span class="user-name">
+                                            World of Statistics&nbsp;
+                                        </span>
+                                        
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+                                        <span class="user-id">&nbsp;@stats_feed&nbsp;&#183;&nbsp;6h</span>
+                                    </div>
+                                    <div class="horizontal-option-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="tweet-text">
+                                    &#127863; Biggest wine producers (% of global production):
+                                    <br><br>
+                                    
+                                    <div class="flag-div">
+                                        <img src="tweet-img/italy.svg"> Italy → 19.30% <br>
+                                        <img src="tweet-img/france.svg"> France → 17.65% <br>
+                                        <img src="tweet-img/spain.svg"> Spain → 13.82% <br>
+                                        <img src="tweet-img/usa.svg"> US → 8.67% <br>
+                                        <img src="tweet-img/australia.svg"> Australia → 4.93% <br>
+                                        <img src="tweet-img/chile.svg"> Chile → 4.82% <br>
+                                        <img src="tweet-img/argentina.svg"> Argentina → 4.43% <br>
+                                        <img src="tweet-img/south-africa.svg"> South Africa → 3.93% <br>
+                                        <img src="tweet-img/germany.svg"> Germany → 3.46% <br>
+                                        <img src="tweet-img/portugal.svg"> Portugal → 2.62% <br>
+                                        <img src="tweet-img/russia.svg"> Russia → 1.82% <br>
+                                        <img src="tweet-img/china.svg"> China → 1.62% <br>
+                                        <img src="tweet-img/new-zealand.svg"> New Zealand → 1.48% <br>
+                                        <img src="tweet-img/romania.svg"> Romania → 1.47% <br>
+                                        <img src="tweet-img/brazil.svg"> Brazil → 1.24% <br>
+                                        <img src="tweet-img/hungary.svg"> Hungary → 1.12% <br>
+                                        <img src="tweet-img/austria.svg"> Austria → 0.98% <br>
+                                        <img src="tweet-img/georgia.svg"> Georgia → 0.83% <br>
+                                        <img src="tweet-img/greece.svg"> Greece → 0.82% <br>
+                                        <img src="tweet-img/maldova.svg"> Moldova → 0.54% <br>
+                                    </div>
+                                </div>
+                                <div class="tweet-img-div">
+
+                                </div>
+
+                                <div class="bottom-icon-div-main">
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-reply"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>                            
+                                        </div>                            
+                                        <span class="bottom-div-counter">
+                                            239
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-retweet">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-retweet"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>                            
+                                        </div>
+                                        <span class="bottom-div-counter-retweet">
+                                            523
+                                        </span>
+                                        
+                                            
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-heart">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-heart"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
+                                        </div>
+                                        <span class="bottom-div-counter-heart">
+                                            5,023
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border-views">
+                                            <div class="icon-border-views">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-views"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
+                                        </div>
+                                        </div>
+                                        <span class="bottom-div-counter-views">
+                                        1M
+                                        </span>
+                                    </div>
+                                    <div class="bottom-icon-div">
+                                        <div class="icon-border">
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" class="bottom-icon-share"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-sidebar">
+                <div class="search-bar-main-div">
+                    <div class="search-bar-div">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" 
+                        class="search-icon">
+                        <g>
+                        <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
+                        </path>
+                        </g>
+                        </svg>
+                        <input class="search-bar" type="text" placeholder="Search">
+                    </div>
+                </div>
+                
+
+                <div class="whats-happening-div">
+                    <div class="whats-happening">What's happening</div>
+                    <div class="whats-happening-content">
+                        <div class="content-main-div">
+                            <div class="title-div">
+                                <div class="category">NFL &#183; 1 hour ago</div>
+                                <div class="title">Colts at Eagles</div>
+                            </div>
+                            <div class="sidebar-img-1-div">
+                                <img class="sidebar-img-1" src="tweet-img/sidebar-img-1.jfif">
+                            </div>
+                        </div>
+                        <div class="content-main-div">
+                            <div class="title-div">
+                                <div class="category">Trending in India</div>
+                                <div class="title">&#35;YuvrajSingh</div>
+                            </div>
+                            <div class="horizontal-option-2-div">
+                                <div class="icon-border-2">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option-2"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="content-main-div">
+                            <div class="title-div">
+                                <div class="category">Science &#183; Trending</div>
+                                <div class="title">&#35;AdityaL1</div>
+                                <div class="number-of-posts">2,794 posts</div>
+                            </div>
+                            <div class="horizontal-option-2-div">
+                                <div class="icon-border-2">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option-2"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="content-main-div">
+                            <div class="title-div">
+                                <div class="category">Science &#183; Trending</div>
+                                <div class="title">&#35;ISROChandrayaan3</div>
+                                <div class="number-of-posts">4,809 posts</div>
+                            </div>
+                            <div class="horizontal-options-2-div">
+                                <div class="icon-border-2">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="horizontal-option-2"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="see-more-div">
+                            <div class="see-more">
+                                Show more
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="who-to-follow-div">
+                    <div class="who-to-follow">Who to follow</div>
+                    <div class="who-to-follow-content">
+                        <div class="content-main-div-2">
+                            <div class="content-div">
+                                <div class="who-to-follow-img-div">
+                                    <img class="who-to-follow-img-1" src="tweet-img/who-to-follow-1.jpg">
+                                </div>
+                                <div class="profile-info">
+                                    <div class="sidebar-profile-name">ISRO 
+                                        <img class="verified-2" src="twitter-icon\twitter-verified.svg">
+                                    </div>
+                                    <div class="sidebar-user-id">@isro</div>
+                                </div>
+                            </div>
+                            
+                            <div class="follow-div">
+                                <div class="follow">
+                                    Follow
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-main-div-2">
+                            <div class="content-div">
+                                <div class="who-to-follow-img-div">
+                                    <img class="who-to-follow-img" src="tweet-img/who-to-follow-2.jpg">
+                                </div>
+                                <div class="profile-info">
+                                    <div class="sidebar-profile-name">Out of Context ISRO 
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+                                    </div>
+                                    <div class="sidebar-user-id">@isroprisdead</div>
+                                </div>
+                            </div>
+                            
+                            <div class="follow-div">
+                                <div class="follow">
+                                    Follow
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-main-div-2">
+                            <div class="content-div">
+                                <div class="who-to-follow-img-div">
+                                    <img class="who-to-follow-img" src="tweet-img/who-to-follow-3.jpg">
+                                </div>
+                                <div class="profile-info">
+                                    <div class="sidebar-profile-name">Allu Arjun 
+                                        <img class="verified" src="twitter-icon\Twitter_Verified_Badge.svg">
+                                    </div>
+                                    <div class="sidebar-user-id">@alluarjun</div>
+                                </div>
+                            </div>
+                            
+                            <div class="follow-div">
+                                <div class="follow">
+                                    Follow
+                                </div>
+                            </div>
+                        </div>
+                        <div class="see-more-div">
+                            <div class="see-more">
+                                Show more
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+    
+                <div class="bottom-links">
+                    <div><span>Terms of Services</span></div>
+                    <div><span>Privacy Policy</span></div>
+                    <div><span>Cookie Policy</span></div>
+                    <div><span>Accessibility</span></div>
+                    <div><span>Ads info</span></div>
+                    <div><span>More</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" 
+                        class="more-fullstop">
+                        <g>
+                        <path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
+
+                        </path>
+                        </g>
+                        </svg>
+                    </div>
+                    <div>&#169; 2023 X Corp.</div>
+                </div>
+            </div>
+
+        </main>
+            
+            
+    </body>
+</html>

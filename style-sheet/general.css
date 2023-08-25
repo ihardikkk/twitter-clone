@@ -1,0 +1,38 @@
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("/twitter-clone/fonts/chirp-regular.woff2") format('woff2');
+    font-weight: 400 ;
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("/twitter-clone/fonts/Chirp-Medium.woff2") format('woff2');
+    font-weight: 500 ;
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("/twitter-clone/fonts/chirp-bold.woff2") format('woff2');
+    font-weight: 700 ;
+
+}
+
+@font-face {
+
+    font-family: "chirp" ;
+    src:url("/twitter-clone/fonts/chirp-extended-heavy-web.woff2") format('woff2');
+    font-weight: 900 ;
+}
+
+body{
+
+    
+    margin: 0 ;
+    font-family: chirp;
+    font-weight: 400 ;
+    height: 2000px;
+}
+

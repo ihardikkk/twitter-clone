@@ -1,0 +1,81 @@
+.header {
+
+    display: flex;
+    position: fixed;
+    flex-direction: column ;
+    z-index: 2 ;
+    background-color: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(6px);
+    border: 1px rgb(240, 240, 240) solid;
+    cursor: pointer;
+
+}
+
+
+.header-sub-div {
+
+    width: 599px ;
+    
+}
+
+.home {
+
+    font-size: 20px ;
+    font-weight: 700;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    padding-left: 15px ;
+}
+
+.fy-and-following-div {
+
+    display: flex;
+    font-weight: 700;
+    font-size: 15px;
+    height: 53px;
+}
+
+.for-you-button {
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 ;
+    position: relative;
+    
+    transition: background-color .25s;
+}
+
+.for-you-button:hover {
+
+    background-color: rgb(225, 225, 225);
+}
+
+.blue-bar-under {
+
+    position: absolute;
+    height: 4px;
+    min-width: 24px ;
+    background-color: rgb(29, 155, 240);
+    border-radius: 999px;
+    bottom: 0;
+    left: 121px;
+    right: 420px;
+    margin-bottom: 1px;
+}
+
+.following-button {
+
+    color: rgb(121, 121, 121);
+    flex: 1 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.following-button:hover {
+
+    background-color: rgb(225, 225, 225);
+}
